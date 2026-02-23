@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filters</title>
+</head>
+
+<body>
+    man<input onchange="categoryHandling(this)" type="checkbox" value="man">
+    woman<input onchange="categoryHandling(this)" type="checkbox" value="woman">
+    kids <input onchange="categoryHandling(this)" type="checkbox" value="kids">
+
+
+    <script>
+        arr =[];
+        function categoryHandling(e) {
+            if(e.checked){
+                arr.push(e.value);
+                console.log(arr);
+            }else{
+                arr=arr.filter(i=>i!=e.value);
+                console.log(arr);
+            }
+
+         }
+    </script>
+</body>
+
+</html>
